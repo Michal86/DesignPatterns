@@ -1,8 +1,11 @@
 import Michal86.builder.IronManSuit;
+import Michal86.classicBuilder.Mark1Builder;
+import Michal86.classicBuilder.Suit;
+import Michal86.classicBuilder.SuitDirector;
 
 public class Main {
     public static void main(String[] args){
-        //Test Builder
+        //FLUENT INTERFACE
         IronManSuit model1_0 = new IronManSuit.Builder("Mark I")
                 .color("Steel Silver")
                 .specialFeatures("Jet Boots")
@@ -19,6 +22,15 @@ public class Main {
 
         System.out.println(model1_0);
         System.out.println(model1_1);
+
+        //CLASSIC BUILDER
+        Mark1Builder mark1 = new Mark1Builder();
+        SuitDirector suitDirector = new SuitDirector(mark1);
+        suitDirector.makeSuit();
+
+        Suit model1_2 = suitDirector.getSuit();
+        System.out.println(model1_2);
+
     }
 
 }

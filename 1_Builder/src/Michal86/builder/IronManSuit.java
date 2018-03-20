@@ -1,4 +1,5 @@
 package Michal86.builder;
+//FLUENT INTERFACE
 
 public class IronManSuit {
 
